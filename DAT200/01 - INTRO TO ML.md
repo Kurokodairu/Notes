@@ -2,11 +2,13 @@
 
 $$
 
-\sqrt(2) = 
+\sqrt(2) = 3
+
+
 $$
 
 
 
-## Code Demo
+## Lecture 1
 
 

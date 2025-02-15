@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DAT200/INTRO TO ML.md",
+                "file": "DAT200/01 - INTRO TO ML.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INTRO TO ML"
+              "title": "01 - INTRO TO ML"
+            }
+          },
+          {
+            "id": "21544ca95a230567",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DAT200/03 - Adaline.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03 - Adaline"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -44,7 +59,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Filutforsker"
             }
           },
           {
@@ -170,17 +185,19 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
+      "switcher:Åpne hurtigåpner": false,
+      "graph:Åpne grafvisning": false,
+      "daily-notes:Åpne dagens notat": false,
+      "templates:Sett inn mal": false,
+      "command-palette:Åpne kommandovelger": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2a634f475371d1cb",
+  "active": "21544ca95a230567",
   "lastOpenFiles": [
-    "DAT200/INTRO TO ML.md"
+    "DAT200/02 - Perceptron.md",
+    "DAT200/01 - INTRO TO ML.md",
+    "DAT200/03 - Adaline.md"
   ]
 }
