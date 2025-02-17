@@ -48,9 +48,37 @@
               "icon": "lucide-file",
               "title": "Untitled"
             }
+          },
+          {
+            "id": "293bf08c3388a3b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DAT200/04 - Recap so far.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "04 - Recap so far"
+            }
+          },
+          {
+            "id": "1eff17732e74c8d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DAT200/05 - Linear and Logistic Regression.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "05 - Linear and Logistic Regression"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -208,11 +236,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "18b1f168703d1e88",
+  "active": "1eff17732e74c8d1",
   "lastOpenFiles": [
-    "Pasted image 20250216222053.png",
-    "DAT200/03 - Adaline.md",
     "Untitled.md",
+    "DAT200/05 - Linear and Logistic Regression.md",
+    "Images/Pasted image 20250216222053.png",
+    "Images",
+    "Images/Pasted image 20250217151821.png",
+    "Images/Pasted image 20250217142719.png",
+    "Images/Pasted image 20250217142714.png",
+    "Images/Pasted image 20250217142700.png",
+    "Images/Pasted image 20250217142655.png",
+    "DAT200/04 - Recap so far.md",
+    "Images/Pasted image 20250217142622.png",
+    "Images/Pasted image 20250217141708.png",
+    "DAT200/03 - Adaline.md",
     "DAT200/02 - Perceptron.md",
     "DAT200/01 - INTRO TO ML.md"
   ]
