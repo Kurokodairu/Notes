@@ -33,4 +33,24 @@ Use thresholding to predict the class label
 
 Gives us labels and probability
 
+
+
+# Derivative of the loss function is given by
+Hence, the derivative of the loss function is given by:
+
+$$
+\frac{\partial L(\theta)}{\partial \theta} = 
+- \sum_{i=1}^{n} \left[ y^{(i)} (1 - \sigma(z)) \mathbf{x}^{(i)} - (1 - y^{(i)}) \sigma(z) \mathbf{x}^{(i)} \right]
+$$
+
+$$
+= - \sum_{i=1}^{n} \left[ \big(y^{(i)} - \sigma(z)\big) \mathbf{x}^{(i)} \right] = 0
+$$
+
+The goal is to maximize the likelihood of the parameters -> minimize negative log-likelihood
+
+$$ L(\theta) = -\ell(\theta) $$ $$ \ell(\theta) = \sum_{i=1}^{n} \left[ y^{(i)} \log (\sigma(z)) + (1 - y^{(i)}) \log (1 - \sigma(z)) \right] $$ $$ \frac{\partial L(\theta)}{\partial \theta} =  \sum_{i=1}^{n} \left[ y^{(i)} (1 - \sigma(z)) \mathbf{x}^{(i)} - (1 - y^{(i)}) \sigma(z) \mathbf{x}^{(i)} \right] $$ $$ = -\sum_{i=1}^{n} \left[ (y^{(i)} - \sigma(z))\mathbf{x}^{(i)} \right] = 0 $$ Component-wise: $$ \frac{\partial L(\theta)}{\partial \theta_j} =  -\sum_{i=1}^{n} x_j^{(i)} \left[ y^{(i)} - \sigma(x^{(i)}\theta) \right] = 0 $$`
+=> but is non-linear so we have no explicit solution
+
+
 ![[Pasted image 20250217151821.png]]
