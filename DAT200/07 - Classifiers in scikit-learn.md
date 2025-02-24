@@ -132,7 +132,6 @@ Finding an appropriate learning rate requires some experimentation
 # Evaluation/Prediciton
 ```python
 # Predict classes for samples in test set and print number of misclassfications
-
 y_pred = ppn.predict(X_test_sc)
 print("Misclassified samples: {0}".format((y_test != y_pred).sum()))
 ```
