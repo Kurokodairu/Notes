@@ -465,3 +465,197 @@ x - Generally good performance for datasets with a high number of features compa
 
 #Q8 Which of the following ensemble model helps in reducing bias?
 -> Boosting
+
+
+
+### DBSCAN, K-mean usupervised clustering.
+#Q1  What does DBSCAN stand for?
+-> Density-Based Spatial Clustering of Applications with Noise
+
+#Q2  In DBSCAN, a **core point** is defined as a point that has:
+-> At least "MinPts" neighbors within "*ε*" distance
+
+#Q3  In DBSCAN, what happens to **border points**?
+-> They are assigned to the cluster of a nearby core point
+
+#Q4  Which of the following is **true** about DBSCAN compared to K-Means?
+-> DBSCAN can identify noise points. -- can id points not belonging to any cluster and label them as noise/outliers. 
+
+#Q5  A main challenge for DBSCAN in **high-dimensional spaces** is:
+-> Distance measures become less meaningful ("curse of dimensionality")
+with more dimensionality distance between two points tend to become less distinct and more uniform. => cant find a ε that distigushes dense regions from sparse. which leads to poor cluster id.
+
+
+### K-means
+need to specify n-clusters
+#Q1 What is the objective of k-means clustering?
+-> To minimize the within-cluster distance
+
+#Q2 How is the initial centroid position chosen in k-means clustering?
+-> Randomly
+
+#Q3 How many iterations does k-means typically go through before converging?
+-> Until convergence
+
+#Q4 What is the drawback of k-means clustering?
+-> It is sensitive to initial conditions
+
+#Q5 What is the most commonly used distance metric in k-means clustering?
+-> Euclidean distance
+
+#Q6 How can you evaluate the quality of k-means clustering results?
+-> By calculating the sum of squared errors (SSE)
+
+
+### Adaboost and Bagging, "Adaptive boosting"
+#Q1 What is AdaBoost?
+-> A boosting algorithm
+
+#Q2 In AdaBoost, which of the following is true about the weight assigned to each training example?
+-> It is initially assignes uniformly to all examples
+
+#Q3 In AdaBoost, how are the coefficients assigned to the weak classifiers in the ensemble?
+->  They are assigned based on their accuracy in classifying the training examples
+
+#Q4 Which of the following is a potential disadvantage of AdaBoost?
+-> It is prone to overfitting
+
+#Q5 What is Bagging?
+-> An ensamble learning technique
+
+#Q6 In Bagging, what is the main idea behind the bootstrap sampling?
+-> To obtain a subset of the training examples by randomly sampling with replacement
+
+
+### Regression
+#Q1 What is the primary objective of linear regression analysis?
+-> To identify the relationship between the input and outcome variables
+
+#Q2 What is the difference between simple linear regression and multiple linear regression?
+-> Simple linear regression involves only one independent variable, while multiple linear regression involves multiple independent variables. 
+
+#Q3 In linear regression, what is the difference between the dependent variable and the independent variable?
+-> The dependent variable is the variable being predicted, the independent variable is a predictor variable 
+
+#Q4 What is the least-squares method in linear regression?
+-> A method for determining the best-fit line by minimizing the sum of the squared residuals.
+
+#Q5 What is the purpose of the coefficient of determination (R-squared) in linear regression?
+-> To measure the proportion of the variation in the dependent variable that is explained by the independent variable.
+
+#Q6 What is the a residual  in linear regression?
+-> Residual is the difference between the observed (actual) value and the predicted value from the model.
+
+
+
+### Linear and Logistic regression
+#Q1 Why do we minimize the sum of squared errors rather than the sum of the absolute values of the errors in linear regression?
+-> We want larger errors to count more than smaller errors
+
+#Q2 What is the relation between linear regression and Adaline?
+-> Adaline is linear regression with a threshold function added
+
+#Q3 Which of the following are requirements for the least squares solution to be unique?
+-> The matrix X'X must be non-singular
+
+#Q4 What is the relation between the sigmoid function and the logit (log-odds)?
+-> the sigmoid function is the invers of the logit
+
+#Q5 What is the main difference between Logistic regression and Adaline?
+-> Logistic regression uses a sigmoid activation function
+while Adaline uses a linear activation function
+
+
+### Random Forests Regression
+#Q1 What is random forest regression?
+-> A type of ensemble learning model
+
+#Q2 How does a random forest regression model make predictions?
+-> By averaging the predictions of all decision trees in the forest
+
+#Q3 What is the purpose of bagging in random forest regression?
+-> To reduce overfitting and increase model generalization
+
+#Q4 What is the advantage of random forest regression over a single decision tree regression?
+-> Random forest regression is more accurate
+
+#Q5 Which of the following is a disadvantage of random forest regression?
+-> It requires a large amount of memory to store the model
+
+
+### Clustering in general
+#Q1 What is the main goal of clustering?
+-> To group data based on similarities
+
+#Q2 What is the purpose of dimensionality reduction in clustering?
+-> To eliminate irrelevant features
+
+#Q3 Which of the following statements is true about classification and clustering?
+-> Classification is a type of supervised learning,
+Clustering is a type of unsupervised learning.
+
+#Q4 What is the main difference between classification and clustering?
+-> Classification is used to predict a target variable based on input variables,
+Clustering is used to group similar data points.
+
+#Q5 In clustering, what is the primary objective of minimizing the objective function?
+-> To minimize the distance between poinst within a cluster
+
+
+### Evaluating Clustering
+#Q1 What is the Silhouette coefficient used for?
+-> Measuring the seperation between clusters
+
+#Q2 A Silhouette coefficient close to 1 indicates: (goes from -1 to +1)
+-> +1 indicates Well-separated clusters,
+high cohesion (similar within clusters)
+poor match to neighbor clusters (high separation)
+
+#Q3 In elbow analysis, what is plotted on the x-axis?
+-> Number of clusters, (elbow method = plotting measures of clustering performance on y-axis vs number of clusters K on x-axis.)
+
+#Q4 What does the elbow point in elbow analysis represent?
+-> The optimal number of clusters.
+
+
+
+### Hierarchical clustering
+#Q1 What is hierarchical clustering?
+-> A clustering algorithm that forms nested clusters by either merging or splitting existing cluster
+
+#Q2 What are the two main types of hierarchical clustering?
+-> Agglomerative (bottom up merging)
+Divisive (top-down splitting)
+
+#Q3 What is the linkage criterion in agglomerative clustering?
+-> A measure of the similarity between two clusters that determines which clusters to merge
+
+#Q4 What is dendrogram in hierarchical clustering?
+-> A visualization tool that shows the hierarchy of nested clusters
+	"A dendrogram is the primary output visualization for hierarchical clustering. It's a tree-like diagram illustrating the sequence of merges or splits and the hierarchical relationships between clusters, often showing the distance level at which actions occurred"
+
+#Q5 What is the main advantage of hierarchical clustering?
+-> It does not require the number of clusters to be specified in advanced
+
+
+### Fuzzy C-mean
+#Q1 What is the goal of Fuzzy C-Mean clustering?
+-> To minimize the sum of squared distances between data points and their assigned clusters
+	"The objective function that Fuzzy C-Means aims to minimize is explicitly defined as J(W,C)=∑i=1n∑j=1cwijm∥xi−cj∥2J(W,C)=∑i=1n∑j=1cwijm∥xi−cj∥2"
+
+#Q2 What is the advantage of Fuzzy C-Mean clustering over K-Means clustering?
+-> Fuzzy C-mean clustering can handle noisy data better than K-means clustering
+
+#Q3 How does the fuzzifier parameter in Fuzzy C-Mean clustering affect the degree of membership for each data point?
+-> Higher fuzzier values lead to more diffuse membership values
+
+#Q4 Which of the following is a disadvantage of using Fuzzy C-Means clustering (and most distance-based clustering algorithms such as K-Means) in high-dimensional data?
+-> FCM may struggle to find meaningful clusters in high-dimensinal spaces
+
+#Q5 Which of the following is a disadvantage of Fuzzy C-Means clustering compared to K-Means clustering?
+-> FCM is more sensitive to the inital choice of centroids
+
+" - FCM is more sensitive to the initial choice of centroids
+- FCM can handle datasets with arbitrary cluster shapes
+- FCM always converges to the global optimum
+- Non of the provided answers"
