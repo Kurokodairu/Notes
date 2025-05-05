@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "292113e53b8ba246",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Images/Pasted image 20250503232005.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250503232005"
-            }
-          },
-          {
             "id": "629f483597b5ab52",
             "type": "leaf",
             "state": {
@@ -33,8 +21,7 @@
               "title": "Overview and final words"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -179,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 270.5
+    "width": 253.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,14 +179,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "259c61f497d507c1",
+  "active": "b74259442714934b",
   "lastOpenFiles": [
-    "DAT200/06 - OPPSUMERING.md",
-    "DAT200_Summary_1.pdf",
-    "DAT200/07 - Classifiers in scikit-learn.md",
+    "Quiz (exam).md",
     "Overview and final words.md",
     "Images/Pasted image 20250503232005.png",
-    "Quiz (exam).md",
+    "DAT200/06 - OPPSUMERING.md",
+    "Images/DAT200_Summary_1.pdf",
+    "DAT200/07 - Classifiers in scikit-learn.md",
     "Untitled.md",
     "DAT200/08 - Overfitting - Regularization.md",
     "Images/Pasted image 20250503234516.png",
