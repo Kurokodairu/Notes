@@ -174,7 +174,7 @@ X - It is equal to the number of iterations until convergence divided by the num
 -> GD finds the minimum of a function, while Newton's method finds the root of a function.
 
 
-# PCA
+### PCA
 #Q1 
 What does PCA do?
 - Predicts your target with high efficiency
