@@ -1,0 +1,41 @@
+ (endurant, perdurant, proposition, quale, quality)
+### 1. DigitaltArtefakt
+
+Et digitalt artefakt (f.eks. et dokument, fil, bilde, dataset) er et objekt
+som har identitet over tid --- selv om innholdet kan endres, er det fortsatt
+"det samme dokumentet". → dol:endurant
+
+### 2. Identifikator
+
+En identifikator (f.eks. DOI, URL, ID-streng) er en påstand eller verdi som
+refererer til noe. Viktig skille: Hvis du modellerer identifikator som et
+objekt med semantisk innhold (en entitet som står for noe), så passer det best
+som en utsagn/proposisjon. → Mest naturlig: dol:proposition (Alternativ: 
+dol:endurant, men da blir det mer som en fysisk/konseptuell "ting" --- tror 
+oppgaven din vil ha proposition her).
+
+### 3. Protokoll
+
+En protokoll (regelsett, prosedyre, retningslinjer) er en beskrivelse av en
+prosess eller et sett handlinger. En faktisk utførelse av en protokoll
+ville være en prosess (dol:perdurant). Men klassen din heter bare Protokoll
+(ikke "ProtokollInstans"), og oppgaven bruker ofte at regler/tekster behandles
+som utsagn (dol:proposition). → dol:proposition (mest korrekt i DOLCE for
+beskrivelser/regler).
+
+### 4. Metadataelement
+
+Et metadataelement (f.eks. "tittel", "forfatter", "opprettelsesdato")
+er en egenskap/attributt ved noe annet. Slike ting er typisk
+dol:quality (fordi de beskriver egenskaper ved et objekt). → dol:quality
+
+Oppsummering for din ontologi:
+
+• DigitaltArtefakt → dol:endurant
+• Identifikator → dol:proposition  
+• Protokoll → dol:proposition
+• Metadataelement → dol:quality
+
+Vil du at jeg skal tegne en enkel grupperingsoversikt i canvas (hvor dine
+klasser legges under riktige DOLCE-topknuter), så du kan bruke som støtte når du
+skriver svaret?
