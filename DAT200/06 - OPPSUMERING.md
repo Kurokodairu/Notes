@@ -34,7 +34,7 @@ If not we cant place a line that can seperate the classes
 
 
 ## Newton vs gradient descent
-\\ File:![[newton_vs_gradientdescent.ipynb]]
+\\ File:![[DAT200/newton_vs_gradientdescent.ipynb]]
 # Overview
 
 This notebook implements and visualizes two fundamental optimization algorithms:

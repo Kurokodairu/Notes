@@ -31,7 +31,7 @@ The problem at hand may be influenced by a number of contextual settings
 
 
 # To train a perceptron with scikit learn
-![[scikit_learn_intro.ipynb]]
+![[DAT200/scikit_learn_intro.ipynb]]
 
 
 # Multi-class classification with OvR

@@ -124,7 +124,7 @@ Graphing Accuracy with different C values to find the best model
 
 ### Example using C, with different C values
 in folder Lec08
-![[03_logreg_iris_regularization.ipynb]]
+![[DAT200/03_logreg_iris_regularization.ipynb]]
 
 ![[Pasted image 20250227131131.png]]
 

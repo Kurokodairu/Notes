@@ -1,4 +1,4 @@
-A.5 (oppløsning via protokoll), A.6 (autentifisering), A.7 (vedvarende metadata)
+aA.5 (oppløsning via protokoll), A.6 (autentifisering), A.7 (vedvarende metadata)
 # a.16
 @prefix A-gruppeA08: <https://www.nmbu.no/fair-semantics/A-gruppeA08#> .
 <https://www.nmbu.no/fair-semantics/A-gruppeA08> a owl:Ontology .  
