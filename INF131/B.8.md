@@ -1,8 +1,8 @@
-6. ∃x Dx
-7. ∀x∀y (Rxy → Cx)
-8. ¬∃x (Dx ∧ Ex)
-9. ∀x (Dx → ∃y (Rxy ∧ Dy))
-10. ∀x (Cx ↔ ∀y (Rxy → Ey))
+
+6. ∀x∀y (Rxy → Cx)
+7. ¬∃x (Dx ∧ Ex)
+8. ∀x (Dx → ∃y (Rxy ∧ Dy))
+9. ∀x (Cx ↔ ∀y (Rxy → Ey))
     
     
 Regler for omgjøring

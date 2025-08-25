@@ -1,35 +1,39 @@
 
 oppgave **b.8**, der målet er å transformere aksiomene 6 til 9 fra førsteordens logikk slik at det **ikke finnes → eller ↔** (Implikasjon og )
-Dette kalles ofte å sette formlene i **negasjonsnormalform** — NNF.
 
 ---
 
-Reglene vi bruker er:
+Regler
 - Implikasjon P→Q omskrives som ¬P∨Q
 - Bikondisjonal P↔Q omskrives til (P→Q)∧(Q→P), og videre til (¬P∨Q)∧(¬Q∨P)
 - Negasjon foran kvantor: ¬∀xφ≡∃x¬φ, og ¬∃xφ≡∀x¬φ
 - De Morgan: ¬(P∧Q)≡¬P∨¬Q, ¬(P∨Q)≡¬P∧¬Q
 
----
-
-- **6:** Start med ∀x∀y(Rxy→Cx). Bruk regelen for implikasjon: vi får
+- **6:** Starter med ∀x∀y(Rxy→Cx). Bruk regelen for implikasjon: vi får
     ∀x∀y(¬Rxy∨Cx)
     
-- **7:** Start med ¬∃x(Dx∧Ex). Vi snur kvantoren og får
-    ∀x¬(Dx∧Ex)
-
-    og så bruker vi De Morgan:    
-    ∀x(¬Dx∨¬Ex)
+- **7:** Starter med ¬∃x(Dx∧Ex). 
+	Negasjonen flyttes: for alle x, ikke (Dx og Ex).
+	
+  Med De Morgan: for alle x, ikke Dx eller ikke Ex:
+  ∀x(¬Dx∨¬Ex)
     
-- **8:** Start med ∀x(Dx→∃y(Rxy∧Dy)). Bruk implikasjon:
+- **8:** Starter med ∀x(Dx→∃y(Rxy∧Dy)). Bruk implikasjon:
     ∀x(¬Dx∨∃y(Rxy∧Dy))
-
 
 - **9:**
 - Vi starter med ∀x(Cx↔∀y(Rxy→Ey))
 - Først bryter vi ned ↔: (Cx∧∀y(Rxy→Ey))∨(¬Cx∧¬∀y(Rxy→Ey))
-- Så  løse pilene: Rxy→Ey blir ¬Rxy∨Ey
+- Så  løse →: Rxy→Ey blir ¬Rxy∨Ey
 - Og ¬∀y(...) blir ∃y¬(...). Dermed ender vi med: ∀x((Cx∧∀y(¬Rxy∨Ey))∨(¬Cx∧∃y(Rxy∧¬Ey)))
+
+ - Vi starter med ∀x(Cx↔∀y(Rxy→Ey))
+- ↔ (hvis og bare hvis) fjernes: (Cx∧∀y(Rxy→Ey))∨(¬Cx∧¬∀y(Rxy→Ey))
+- → (hvis ... så) fjernes: Rxy→Ey≡¬Rxy∨Ey
+  Negasjon foran kvantor: ¬∀y(...)≡∃y¬(...)¬∀y(...)≡∃y¬(...). 
+  Inni gir det Rxy∧¬Ey.
+  Dermed:
+  ∀x((Cx∧∀y(¬Rxy∨Ey))∨(¬Cx∧∃y(Rxy∧¬Ey)))
 
 
 | Nr  |                   |                                        |
