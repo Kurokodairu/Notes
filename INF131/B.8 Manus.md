@@ -79,7 +79,7 @@ Regler
     "Så vi får: for alle x, (Cx og for alle y, hvis Rxy så Ey) eller (ikke Cx og ikke for alle y, hvis Rxy så Ey)."
     ( (Cx∧∀y(Rxy→Ey))∨(¬Cx∧¬∀y(Rxy→Ey)) )
     "Nå tar vi implikasjonspilen (→) inni kvantoren. 'Hvis Rxy så Ey' blir 'ikke Rxy eller Ey'."
-    "Og vi flytter negasjonen foran allkvantoren: 'ikke for alle y (…) ' blir 'det finnes en y slik at ikke (…) '. Dette gir 'Rxy og ikke Ey'."
+    "Og vi flytter negasjonen foran allkvantoren: 'ikke for alle y (…) ' blir 'for en y slik at ikke (…) '. Dette gir 'Rxy og ikke Ey'."
     "Så sluttresultatet er:
-    for alle x, (Cx og for alle y, ikke Rxy eller Ey) eller (ikke Cx og det finnes en y slik at Rxy og ikke Ey)."
+    for alle x, (Cx og for alle y, ikke Rxy eller Ey) eller (ikke Cx og for en y slik at Rxy og ikke Ey)."
     ( ∀x((Cx∧∀y(¬Rxy∨Ey))∨(¬Cx∧∃y(Rxy∧¬Ey))) )

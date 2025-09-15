@@ -1,0 +1,83 @@
+@prefix gruppe08: <https://www.nmbu.no/fair-semantics/gruppe08#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dol:  <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#> .
+
+<https://www.nmbu.no/fair-semantics/gruppe08> a owl:Ontology .
+
+
+### Overklasser
+gruppe08:DigitalRessurs a owl:Class ;
+  skos:definition "En digital entitet som kan identifiseres og aksesseres elektronisk." ;
+  rdfs:subClassOf dol:endurant .
+
+gruppe08:Tilgangsprosess a owl:Class ;
+  skos:definition "En prosess som gjør det mulig å aksessere en digital ressurs." ;
+  rdfs:subClassOf dol:perdurant .
+
+
+### Klasser
+gruppe08:DigitaltArtefakt a owl:Class ;
+  rdfs:subClassOf dol:endurant , gruppe08:DigitalRessurs ;
+  skos:definition "En digital ressurs som inneholder meningsfull informasjon og kan deles, lastes ned, og gjenbrukes." .
+
+gruppe08:Identifikator a owl:Class ;
+  rdfs:subClassOf dol:endurant , gruppe08:DigitalRessurs ;
+  skos:definition "Langvarig referanse til en digital ressurs. (f.eks DOI)" .
+
+gruppe08:Protokoll a owl:Class ;
+  rdfs:subClassOf dol:perdurant , gruppe08:Tilgangsprosess ;
+  skos:definition "Et standardisert sett med regler for oppløsning og tilgang." .
+
+gruppe08:Metadataelement a owl:Class ;
+  rdfs:subClassOf dol:quality , gruppe08:DigitalRessurs ;
+  skos:definition "Metadata er data om data, [...] som lokaliserer, beskriver, forklarer, eller på andre måter gjør det enklere å hente, (gjen)bruke eller forvalte en informasjonsressurs." .
+
+
+### Objektegenskaper
+gruppe08:identifiserer a owl:ObjectProperty ;
+  rdfs:domain gruppe08:Identifikator ;
+  rdfs:range  gruppe08:DigitalRessurs .
+
+gruppe08:løsbargjennom a owl:ObjectProperty ;
+  rdfs:domain gruppe08:Identifikator ;
+  rdfs:range  gruppe08:Protokoll .
+
+gruppe08:beskriver a owl:ObjectProperty ;
+  rdfs:domain gruppe08:Metadataelement ;
+  rdfs:range  gruppe08:DigitaltArtefakt .
+
+
+### Datatypeegenskaper
+gruppe08:erStandardisert a owl:DatatypeProperty ;
+  rdfs:domain gruppe08:Protokoll ;
+  rdfs:range xsd:boolean .
+
+gruppe08:erÅpen a owl:DatatypeProperty ;
+  rdfs:domain gruppe08:Protokoll ;
+  rdfs:range xsd:boolean .
+
+gruppe08:tillaterAutentifisering a owl:DatatypeProperty ;
+  rdfs:domain gruppe08:Protokoll ;
+  rdfs:range xsd:boolean .
+
+gruppe08:vedvarendeMetadata a owl:DatatypeProperty ;
+  rdfs:domain gruppe08:Metadataelement ;
+  rdfs:range xsd:boolean .
+
+### b.11
+gruppe08:PersistentIdentifikator a owl:Class ;
+  owl:equivalentClass gruppe08:Identifikator ;
+  skos:definition "PersistentIdentifikator er det samme som Identifikator (f.eks DOI, Handle, URN)." .
+
+### b.12
+gruppe08:Identifikator rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty gruppe08:identifiserer ;
+  owl:someValuesFrom gruppe08:DigitalRessurs
+] .
+
+### b.13 Disjunktivitet av klasser
+gruppe08:Protokoll owl:disjointWith gruppe08:Identifikator .

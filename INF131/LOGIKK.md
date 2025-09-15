@@ -186,3 +186,9 @@ Common Inference Rules (given in the slides):
 > - If α is false → then from first premise, β must be true → so β ∨ γ is true. → In both cases, β ∨ γ is true → rule is valid.
 
 
+
+De morgan
+∀x F(x) ≡ ¬∃x ¬F(x)
+∀x ¬F(x) ≡ ¬∃x F(x)
+∃x F(x) ≡ ¬∀x ¬F(x)
+∃x ¬F(x) ≡ ¬∀x F(x)

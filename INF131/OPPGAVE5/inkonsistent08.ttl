@@ -1,0 +1,51 @@
+@prefix gruppe08: <https://www.nmbu.no/fair-semantics/gruppe08#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://www.nmbu.no/fair-semantics/gruppe08> a owl:Ontology .
+
+
+gruppe08:Protokoll a owl:Class .
+gruppe08:Tilgangsprosess a owl:Class .
+gruppe08:Identifikator a owl:Class .
+gruppe08:DigitalRessurs a owl:Class .
+
+# T-boks (regler 1–7)
+# (1) Protokoll ⊑ Tilgangsprosess
+gruppe08:Protokoll rdfs:subClassOf gruppe08:Tilgangsprosess .
+
+# (2) Identifikator ⊑ DigitalRessurs
+gruppe08:Identifikator rdfs:subClassOf gruppe08:DigitalRessurs .
+
+# (3) Protokoll ⊓ Identifikator ⊑ ⊥
+gruppe08:Protokoll owl:disjointWith gruppe08:Identifikator .
+
+# (4) ∃ løsbargjennom.⊤ ⊑ Identifikator
+gruppe08:løsbargjennom a owl:ObjectProperty ;
+  rdfs:domain gruppe08:Identifikator .
+
+# (5) ⊤ ⊑ ∀ løsbargjennom.Protokoll
+gruppe08:løsbargjennom rdfs:range gruppe08:Protokoll .
+
+# (6) ∃ identifiserer.⊤ ⊑ Identifikator
+gruppe08:identifiserer a owl:ObjectProperty ;
+  rdfs:domain gruppe08:Identifikator .
+
+# (7) ⊤ ⊑ ∀ identifiserer.DigitalRessurs
+gruppe08:identifiserer rdfs:range gruppe08:DigitalRessurs .
+
+
+# A-boks: 
+# F1) Identifikator(pi)
+gruppe08:pi a gruppe08:Identifikator .
+
+# F2) løsbargjennom(pi, p)
+gruppe08:pi gruppe08:løsbargjennom gruppe08:p .
+
+# F3) Identifikator(p)
+gruppe08:p a gruppe08:Identifikator .
+
+# F4) identifiserer(p, pi)
+gruppe08:p gruppe08:identifiserer gruppe08:pi .
