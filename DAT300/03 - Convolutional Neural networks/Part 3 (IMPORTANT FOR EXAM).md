@@ -344,6 +344,8 @@ As a result of the filter sliding across the input, and being involved in the co
 <img src="./03-zip/images/Conv_backward_filter.gif" alt="Backward convolution (filter)" style="width: 800px;"/>
 <img src="./03-zip/images/Conv_backward_filter.png" alt="Backward convolution (filter)" style="width: 350px;"/>
 
+![[Part 3 (IMPORTANT FOR EXAM) 2025-10-06 12.54.38.excalidraw]]
+
 ### Automatic tuning
 - [Keras Tuner](https://keras-team.github.io/keras-tuner)  
 - Random search over a grid/interval of hyperparameters
