@@ -132,16 +132,16 @@ Useful traits: `is_arithmetic`, `is_signed`, `is_pointer`, `is_class`, `is_array
 
 ## STL Container Quick Reference
 
-| Container | Type | Notes |
-|---|---|---|
-| `vector<T>` | Dynamic array | Like Python list |
-| `deque<T>` | Double-ended dynamic array | Push/pop both ends |
-| `forward_list<T>` | Singly linked list | |
-| `list<T>` | Doubly linked list | |
-| `set<T>` | Unique keys, sorted | |
-| `map<T,V>` | Key→value, unique keys | |
-| `multimap<T,V>` | Key→value, duplicate keys ok | |
-| `array<T,n>` | Static array (fixed size `n`) | Like `T[]` |
+| Container         | Type                          | Notes              |
+| ----------------- | ----------------------------- | ------------------ |
+| `vector<T>`       | Dynamic array                 | Like Python list   |
+| `deque<T>`        | Double-ended dynamic array    | Push/pop both ends |
+| `forward_list<T>` | Singly linked list            |                    |
+| `list<T>`         | Doubly linked list            |                    |
+| `set<T>`          | Unique keys, sorted           |                    |
+| `map<T,V>`        | Key→value, unique keys        |                    |
+| `multimap<T,V>`   | Key→value, duplicate keys ok  |                    |
+| `array<T,n>`      | Static array (fixed size `n`) | Like `T[]`         |
 
 ---
 
