@@ -45,3 +45,7 @@ LAST IN FIRST OUT - **LIFO**
 ### Queue
 FIRST IN FIRST OUT - FIFO
 
+
+---
+
+## Linked lists 

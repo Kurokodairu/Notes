@@ -37,3 +37,16 @@
 
 6. _Kvifor brukar du [current_positions] som ein vektor og ikkje rekursjon?_  
     Fordi fleire kantar kan ha same label frå same node. Du må samstundes spore alle moglege posisjonar du kan vere på etter kvart steg — ein slags BFS-frontend.
+
+
+--- 
+
+Insidenslista er gjennomgåande raskare enn matrisa for SCC.  
+Veksten ser ut til å vera om lag kvadratisk for begge, noko som  
+skuldast at label_to_i() gjer lineært søk (\(O(n)\)) per  
+nabokall. Matrisa er i tillegg treigare fordi  
+get_outgoing() må skanne heile rada (\(O(n)\)) sjølv om noden  
+har få utgåande kantar, medan insidenslista berre itererer over  
+faktiske kantar.
+
+Kvar node held ei liste over alle innsidente kantar (edges-vektor) for effektiv traversering. Denne lista er utleidd frå source/target-relasjonane.
