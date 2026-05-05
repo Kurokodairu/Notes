@@ -50,3 +50,13 @@ har få utgåande kantar, medan insidenslista berre itererer over
 faktiske kantar.
 
 Kvar node held ei liste over alle innsidente kantar (edges-vektor) for effektiv traversering. Denne lista er utleidd frå source/target-relasjonane.
+
+---
+for (int j = 0; j < (int)node_labels.size(); j++)
+(int) -> cast .size() a size_t to an integer for comparison
+
+---
+
+i disconnect (incidenceListGraph)
+når e fjernes
+må vi ha delete e, fordi vi har new e; i linje 110, (insert_edge())
