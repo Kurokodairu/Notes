@@ -1,0 +1,5 @@
+FAIR
+Findability
+Accessibility
+Interoperability
+Reusability
