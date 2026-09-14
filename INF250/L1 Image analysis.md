@@ -36,3 +36,25 @@ Image processing techiniques
 - image segmentation
 - object detection
 
+
+Spatial resolutions
+![[Pasted image 20260907133346.png]]
+
+Can also be streched to larger... -> Becomes pixelize
+
+
+Concept Controls Example Visible effect
+
+Sampling  Number and spacing of pixels 100 × 100vs. 1000 ×
+1000pixels Spatial detail and pixelation
+Spatial resolution Ability to distinguish small
+spatial details Fine text, hair, edges Higher sampling can support
+higher spatial resolution
+Quantization Number of intensity/color
+levels 2, 16, or 256 gray levels Smooth tones versus banding
+Stretching/resizing Display or output dimensions 100 × 100 → 1000 × 1000 Makes pixels larger or
+interpolates new pixels
+
+
+
+![[Pasted image 20260907134213.png]]

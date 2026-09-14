@@ -1,0 +1,117 @@
+# base for the ABox, so e.g.
+# <Frank> is short for "https://home.bawue.de/~horsch/teaching/inf230/lab/data#Frank"
+#
+@base <https://home.bawue.de/~horsch/teaching/inf230/lab/data#>.
+
+# these are always needed
+#
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xs: <http://www.w3.org/2001/XMLSchema#>.
+
+# common for annotating datasets: DCAT and Dublin Core (DC)
+#
+@prefix dcterms: <http://purl.org/dc/terms/>.
+
+@prefix p1: <https://home.bawue.de/~horsch/teaching/inf230/lab/inf230-problem-1.html#>.
+
+# some basic metadata
+#
+<https://home.bawue.de/~horsch/teaching/inf230/material/p1.ttl> a owl:Ontology;
+   dcterms:title "Drafting problem 1"@en;
+   dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/>.
+
+### Employer ###
+
+p1:Employer a owl:Class;
+   rdfs:subClassOf p1:Organization;
+   # Employer is exactly the class of things that have at least one employee.
+   owl:equivalentClass [
+         a owl:Restriction;
+         owl:onProperty p1:hasEmployee;
+         owl:someValuesFrom owl:Thing
+      ].
+
+p1:hasEmployee a owl:ObjectProperty;
+   rdfs:domain p1:Employer;
+   rdfs:range p1:Human;
+   owl:inverseOf p1:isEmployedAt.
+
+### Human ###
+
+p1:Human a owl:Class;
+   # Every Human has a p_number.
+   rdfs:subClassOf p1:Person, [
+         a owl:Restriction;
+         owl:onProperty p1:p_number;
+         owl:someValuesFrom xs:integer
+      ];
+   skos:definition "person that according to biology is a homo sapiens"@en;
+   skos:scopeNote "Attention: The rules from our ontology require a human to have p_number. This is not part of our definition, only a technical detail."@en.
+
+# The o_number and the p_number are unique.
+p1:p_number a owl:DatatypeProperty, owl:FunctionalProperty;
+   rdfs:domain p1:Human;
+   rdfs:range xs:integer.
+
+### Organization ###
+
+p1:Organization a owl:Class;
+   # Every Organization has an o_number.
+   rdfs:subClassOf p1:Person, [
+         a owl:Restriction;
+         owl:onProperty p1:o_number;
+         owl:someValuesFrom xs:integer
+      ];
+   owl:disjointWith p1:Human.
+
+# The o_number and the p_number are unique.
+p1:o_number a owl:DatatypeProperty, owl:FunctionalProperty;
+   rdfs:domain p1:Organization;
+   rdfs:range xs:integer.
+
+# The o_number and the p_number are unique.
+
+### Person ###
+
+p1:Person a owl:Class.
+
+p1:name a owl:DatatypeProperty;
+   rdfs:domain p1:Person;
+   rdfs:range xs:string.
+
+### ABox (instance data) ###
+
+<Frank> a p1:Person;
+   p1:p_number "11"^^xs:integer.
+
+#
+# [p1:o_number "32"^^xs:integer] p1:hasEmployee <Frank>.
+#
+<Frank> p1:isEmployedAt [p1:o_number "32"^^xs:integer].
+
+# Create a violation of 1.1b.4 with 1.3a by introducing an Organization that is an employee.
+#
+# <FakeOrganization> a p1:Organization.
+# <ActualOrganization> p1:hasEmployee <FakeOrganization>.
+
+# Create a violation of 1.1b.5 with 1.3a by introducing a Human that has an o_number.
+#
+# <Pete> a p1:Human;
+#    p1:o_number "33"^^xs:integer.
+
+# Create an apparent violation of 1.3b by introducing an Employer without introducing any employees.
+<ActualOrganization> a p1:Employer.
+#
+# Why is it only an apparent violation?
+# Open world assumption.
+
+# Create an apparent violation of 1.3c by introducing an individual with the same p_number as <Frank>.
+<Pete> a p1:Human;
+   p1:p_number "11"^^xs:integer.
+
+# Why is it only an apparent violation?
+# Non-unique naming convention.
+
